@@ -1,0 +1,74 @@
+POST http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T042120.404.html
+
+###
+
+POST http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T042105.404.html
+
+###
+
+POST http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T042104.404.html
+
+###
+
+GET http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T042057.404.html
+
+###
+
+GET http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T042056.404.html
+
+###
+
+GET http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T041838.404.html
+
+###
+
+GET http://127.0.0.1:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-27T041825.404.html
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+
