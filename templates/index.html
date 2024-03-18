@@ -6,7 +6,28 @@
 
 {% block body %}
 {% include 'header.html' %}
-<div class="content-main container-fluid">Test</div>
+<div class="content-main container-fluid">
+
+    <table border="1">
+        <thead>
+            <tr>
+                {% for column in excel_data.columns %}
+                    <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in excel_data.iterrows %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
 
 {% endblock %}
 

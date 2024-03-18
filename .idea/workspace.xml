@@ -7,7 +7,8 @@
     <list default="true" id="2b56fbe0-1af2-4a88-bd79-6706732e17ff" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/acwr/urls.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/acwr/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/upload_excel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/alywebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alywebsite.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -36,9 +37,7 @@
       <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/map/admin.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/map/apps.py" beforeDir="false" />
@@ -135,6 +134,7 @@
       <change beforePath="$PROJECT_DIR$/templates/database.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header-dashboard.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/overview.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pdf_to_out.html" beforeDir="false" />
@@ -297,8 +297,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -667,7 +667,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/ACWR/acwrapp",
+    "last_opened_file_path": "C:/ACWR/acwrapp/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -677,19 +677,19 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ACWR\acwrapp\templates" />
+      <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\js" />
+      <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\css" />
+      <recent name="C:\Users\Hamit\Desktop\alywebsite\static\img" />
+      <recent name="C:\Users\Hamit\Desktop\alywebsite\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\recordings" />
       <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\pdf" />
       <recent name="C:\Users\Hamit\Desktop\alywebsite\static\img" />
       <recent name="C:\Users\Hamit\Desktop\alywebsite\templates" />
       <recent name="C:\Users\hamit\Desktop\alywebsite\staticfiles\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\js" />
-      <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\css" />
-      <recent name="C:\Users\Hamit\Desktop\alywebsite\static\img" />
-      <recent name="C:\Users\Hamit\Desktop\alywebsite\static" />
-      <recent name="C:\Users\Hamit\Desktop\alywebsite\static\pdf" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -813,7 +813,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529537522820</updated>
-      <workItem from="1710793017094" duration="4373000" />
+      <workItem from="1710793017094" duration="5947000" />
     </task>
     <servers />
   </component>
