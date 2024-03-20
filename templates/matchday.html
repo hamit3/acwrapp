@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+    Anasayfa - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+{% include 'header.html' %}
+ <div class="container">
+        <h1 class="mt-5">Maximum Matchday Performance Metrics</h1>
+        <p>Update maximum matchday performance values if there has been any change.</p>
+
+        <!-- Tablo başlangıcı -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Team Name : {{ User.team.name }}</th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-bordered table-hover mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Player Name</th>
+                        <th scope="col">Duration (minutes)</th>
+                        <th scope="col">Total Distance (meters)</th>
+                        <th scope="col">High Speed Distance (meters) (>20km/h)</th>
+                        <th scope="col">Sprint Distance (meters) (>25km/h)</th>
+                        <th scope="col">High Metabolic Load Distance (meters) (>25.5W/kg)</th>
+                        <th scope="col">Sum of Acceleration and Deceleration Count (>3m/s2)</th>
+                        <th scope="col">Max Seed (km/h)</th>
+                        <th scope="col">Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in User.team.team_players.all %}
+                        {% for max_match_data in player.max_match_values.all %}
+                            <tr>
+                                <td>{{ player.name }}</td>
+                                <td>{{ max_match_data.duration }}</td>
+                                <td>{{ max_match_data.total_distance }}</td>
+                                <td>{{ max_match_data.high_speed_distance }}</td>
+                                <td>{{ max_match_data.sprint_distance }}</td>
+                                <td>{{ max_match_data.hmld }}</td>
+                                <td>{{ max_match_data.total_acc_deacc }}</td>
+                                <td>{{ max_match_data.max_speed }}</td>
+                                <td><a href="">
+                                    <button type="button" class="btn btn-secondary"><span class="bi-search"></span>Edit</button>
+                                </a></td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
+
+

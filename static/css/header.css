@@ -1,0 +1,14 @@
+/* Genel Stiller */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo img {
+    height: 40px; /* Logo yüksekliği */
+}
+
+#useravatar {
+    height: 40px; /* Kullanıcı avatarı yüksekliği */
+    border-radius: 50%; /* Yuvarlak köşeler */
+}

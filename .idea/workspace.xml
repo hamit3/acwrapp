@@ -5,142 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b56fbe0-1af2-4a88-bd79-6706732e17ff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/acwr/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/acwr/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/upload_excel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alywebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alywebsite.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchday/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchday/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchday/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchday/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchday/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matchday/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/matchday.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alyweb/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alyweb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/acwr/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alyweb/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alyweb/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/plots.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acwr/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/acwr/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acwr/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/acwr/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/matchday/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/migrations/0002_auto_20220127_1432.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/migrations/0003_auto_20220127_1440.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/migrations/0004_auto_20220129_0028.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/migrations/0005_auto_20220129_0241.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycalendar/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/migrations/0002_auto_20220124_1746.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/migrations/0003_auto_20220124_2355.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/migrations/0004_auto_20220125_0029.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/migrations/0005_auto_20220125_0210.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/plots.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recordings/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/EptsPod1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/EptsPod2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/EptsPod3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/epts_foto_2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/epts_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/epts_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/epts_logo_beyaz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/epts_stat_grey.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/loading_icon.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/player_1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/semaEPTSlowQty.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/unknown_player.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/unknown_player.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/vesikalik.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/style.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pdf/epts_short.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/video/epts.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/activity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analysis.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/calendar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/database.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header-dashboard.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/overview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pdf_to_out.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/plot_to_update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reports.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload_excel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newdata.html" afterDir="false" />
     </list>
     <list id="6cdc6823-7cb8-4b69-ba59-7cdec8eef7dd" name="İlk sürüm" comment="İlk sürüm&#10;&#10;(cherry picked from commit 795b201)">
       <changelist_data name="Hamit UCUNCU" email="hamit.ucuncu@ogr.iu.edu.tr" date="1530057117000" />
@@ -411,9 +311,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="871" />
     <option name="y" value="186" />
@@ -440,7 +340,9 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
@@ -663,6 +565,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -673,16 +576,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ACWR\acwrapp\templates" />
+      <recent name="C:\ACWR\acwrapp\static\css" />
+      <recent name="C:\ACWR\acwrapp" />
       <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\js" />
       <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\static\css" />
-      <recent name="C:\Users\Hamit\Desktop\alywebsite\static\img" />
-      <recent name="C:\Users\Hamit\Desktop\alywebsite\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PROJELER\EPTS_WEB_APP\alywebsite\recordings" />
@@ -813,7 +717,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529537522820</updated>
-      <workItem from="1710793017094" duration="5947000" />
+      <workItem from="1710793017094" duration="10552000" />
+      <workItem from="1710856586082" duration="3695000" />
+      <workItem from="1710879077743" duration="7288000" />
+      <workItem from="1710937755969" duration="35475000" />
     </task>
     <servers />
   </component>
@@ -899,7 +806,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="githubRepo/master" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -911,14 +818,11 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/home/views.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

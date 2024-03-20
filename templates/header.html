@@ -1,2 +1,38 @@
 {% load static %}
-<header class="main_header"></header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">ACWR.AI </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/maxmatchday/' %}active{% endif %}" href="{% url 'matchday' %}">Matchday Metrics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/newdata/' %}active{% endif %}" href="{% url 'newdata' %}">Load New Data</a>
+        </li>
+        {% endif %}
+      </ul>
+
+      <!-- Sign In and Sign Out -->
+      <ul class="navbar-nav">
+        {% if not request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Sign In</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <img src="{% static 'img/user.jpeg'%}" alt="Sign Out" id="useravatar">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Sign Out</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

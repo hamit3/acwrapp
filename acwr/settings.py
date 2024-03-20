@@ -19,6 +19,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'newdata',
+    'matchday',
 ]
 
 MIDDLEWARE = [
@@ -32,6 +37,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'acwr.urls'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TEMPLATES = [
     {
@@ -58,9 +65,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-print(os.path.join(BASE_DIR, 'db.sqlite3'))
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -100,7 +104,8 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 CKEDITOR_JQUERY_URL = os.path.join(STATIC_URL, 'js/jquery.min.js')
 

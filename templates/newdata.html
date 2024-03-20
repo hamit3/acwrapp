@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+    Anasayfa - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+{% include 'header.html' %}
+
+<style>
+    .new_data_container {
+  width: auto;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+</style>
+
+ <div class="new_data_container">
+    <h3>Upload Training Data</h3>
+     <form action="{% url 'newdata' %}" method="post">
+        {% csrf_token %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Player Name</th>
+                    <th>Training Type</th>
+                    <th>Training Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Total Distance</th>
+                    <th>HSD (meters) (>20km/h)</th>
+                    <th>HMLD (meters) (>25.5W/kg)</th>
+                    <th>Acceleration (>3m/sn2)</th>
+                    <th>Maximum Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in User.team.team_players.all %}
+                <tr class="player-row">
+                    <td><input type="checkbox" checked class="disable-row-checkbox"></td>
+                    <td><input type="text" disabled readonly value="{{ player.name }}" name="player_{{ player.id }}_player_name"></td>
+                    <td>
+                        <select name="player_{{ player.id }}_training_type">
+                            <option value="1">TRAINING</option>
+                            <option value="2">MATCH</option>
+                            <option value="3">REGENERATION</option>
+                            <option value="4">REHABILITATION</option>
+                            <option value="5">OTHER</option>
+                        </select>
+                    </td>
+                    <td><input type="date" value="2024-01-01" required name="player_{{ player.id }}_training_date"></td>
+                    <td><input type="time" value="00:00" required name="player_{{ player.id }}_start_time"></td>
+                    <td><input type="time" value="00:00" required name="player_{{ player.id }}_end_time"></td>
+                    <td><input type="number" value="0" required name="player_{{ player.id }}_total_distance"></td>
+                    <td><input type="number" value="0" required name="player_{{ player.id }}_hsd"></td>
+                    <td><input type="number" value="0" required name="player_{{ player.id }}_hmld"></td>
+                    <td><input type="number" value="0" required name="player_{{ player.id }}_accdec"></td>
+                    <td><input type="number" value="0" required min="0" step=".01" name="player_{{ player.id }}_maxspeed"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+ </div>
+
+<script>
+    window.onload = function() {
+        var checkboxes = document.querySelectorAll('.disable-row-checkbox');
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                var row = this.closest('.player-row'); // Checkbox'un bulunduğu satırı bul
+                var inputs = row.querySelectorAll('input, select, textarea');
+                if (this.checked) {
+                    inputs.forEach(function(input) {
+                        input.disabled = false;
+                    });
+                } else {
+                    inputs.forEach(function(input) {
+                        if (input !== checkbox) { // Checkbox dışındaki giriş alanlarını kontrol et
+                            input.disabled = true; // Satırdaki tüm giriş alanlarını devre dışı bırak
+                        }
+                    });
+                }
+            });
+        });
+    };
+</script>
+
+{% endblock %}
+
+

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}
+    Anasayfa - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+{% include 'header.html' %}
+
+  <style>
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+      border-radius: 3%; /* Yuvarlak köşeler */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .list-group-item {
+      border-color: transparent;
+      border-radius: 0;
+    }
+
+    .list-group-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <div class="container">
+    <h1>Introduction to ACWR (Acute Chronic Workload Ratio)</h1>
+    <p>
+      ACWR is a ratio used in sports science to monitor the balance between the short-term (acute) and long-term (chronic) workload of athletes.
+    </p>
+    <p>
+      The acute workload refers to the recent training load, typically measured over a one-week period. On the other hand, the chronic workload represents the longer-term average training load, often measured over a four-week period.
+    </p>
+    <p>
+      By comparing the acute workload to the chronic workload, coaches and sports scientists can assess whether athletes are at risk of overtraining (when acute workload is significantly higher than chronic workload) or undertraining (when acute workload is significantly lower than chronic workload).
+    </p>
+    <p>
+      Our platform provides tools to calculate and analyze ACWR, helping coaches and athletes make informed decisions about training and recovery strategies.
+    </p>
+    <h2>Why Choose Our Platform?</h2>
+    <ul>
+      <p></p>
+      <li>Utilizes data from leading sports performance devices such as Actinsports, Catapultsport, and Statsports.</li>
+      <p></p>
+      <li>Provides comprehensive analysis and insights into ACWR.</li>
+      <p></p>
+      <li>Allows for customized training plans based on individual athlete needs.</li>
+      <p></p>
+      <li>Supports real-time monitoring of workload to optimize performance and reduce injury risk.</li>
+      <p></p>
+    </ul>
+    <p>
+      Whether you're a coach, athlete, or sports scientist, our platform is your ultimate tool for enhancing performance and achieving your goals.
+    </p>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-6">
+          <div class="card-body">
+            <h2 class="card-title">Free Plan</h2>
+            <hr>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Track your team</li>
+              <li class="list-group-item">Create up to 20 players</li>
+              <li class="list-group-item">Match and training data entry</li>
+              <li class="list-group-item">Acute and chronic load tracking</li>
+            </ul>
+            <hr>
+            <a href="{% url 'login' %}" class="btn btn-dark">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-6">
+          <div class="card-body">
+            <h2 class="card-title">Professional Plan</h2>
+            <hr>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Track up to 5 teams</li>
+              <li class="list-group-item">Create up to 200 players</li>
+              <li class="list-group-item">Match and training data entry</li>
+              <li class="list-group-item">Acute and chronic load tracking</li>
+              <li class="list-group-item">Actinsports API</li>
+              <li class="list-group-item">Custom Reports</li>
+              <li class="list-group-item">Injury risk tracking with AI</li>
+              <li class="list-group-item">Periodization with AI</li>
+            </ul>
+            <hr>
+            <a href="{% url 'login' %}" class="btn btn-dark">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
