@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
 from .models import Profile, Team, Player, MaxMatchData
+from newdata.models import TrainingData
 
 class ProfileInline(admin.StackedInline):
     model = Profile
@@ -35,6 +36,11 @@ class PlayersAdmin(admin.ModelAdmin):
 @admin.register(MaxMatchData)
 class MaxMatchData(admin.ModelAdmin):
     list_display = ['player', 'duration', 'total_distance', 'high_speed_distance', 'sprint_distance', 'hmld', 'total_acc_deacc', 'max_speed']
+
+@admin.register(TrainingData)
+class TrainingData(admin.ModelAdmin):
+    list_display = ['player', 'training_type', 'training_date', 'duration', 'total_distance', 'high_speed_distance', 'hmld', 'total_acc_deacc', 'max_speed']
+
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)

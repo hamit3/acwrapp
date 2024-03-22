@@ -1,0 +1,23 @@
+<tr>
+    <td>{{ training_data.player.name }}</td>
+    <td>{{ training_data.training_type }}</td>
+    <td>{{ training_data.training_date }}</td>
+    <td>{{ training_data.duration }}</td>
+    <td>{{ training_data.total_distance }}</td>
+    <td>{{ training_data.high_speed_distance }}</td>
+    <td>{{ training_data.sprint_distance }}</td>
+    <td>{{ training_data.hmld }}</td>
+    <td>{{ training_data.total_acc_deacc }}</td>
+    <td >{{ training_data.max_speed }}</td>
+    <td>
+        <button class='btn'
+        hx-confirm='Are you sure?'
+        hx-target="closest tr"
+        hx-swap="outerHTML swap:1s"
+        hx-delete="{% url 'delete_training' training_data.pk %}">
+        <svg class="bi bi-trash3" width="24" height="24">
+            <use xlink:href="#trash3">
+        </svg>
+        </button>
+    </td>
+</tr>

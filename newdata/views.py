@@ -1,21 +1,46 @@
+import json
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
+from newdata.models import TrainingData
+from django.views.generic import TemplateView
+from django import forms
+from django.views.decorators.http import require_http_methods
 
-# Create your views here.
+class NewDataView(TemplateView):
+    template_name = 'newdata.html'
 
-from django.shortcuts import render, redirect
-from .forms import TrainingDataForm
+class TrainingDataForm(forms.ModelForm):
+    class Meta:
+        model = TrainingData
+        exclude = []
 
-def newdata_view(request):
-    if request.method == 'POST':
-        form = TrainingDataForm(request.POST)
-        print(form)
-        if form.is_valid():
-            training_data = form.save(commit=False)
-            training_data.user = request.user
-            training_data.save()
-            print(training_data)
-            return redirect('home')  # Redirect to home or any other page
+def get_training_list(request):
+    context = {}
+    training_data = TrainingData.objects.all().order_by('-id')
+    context['training_datas'] = training_data
+    return render(request, 'training_list.html', context)
+
+
+def add_training(request):
+    context = {'form': TrainingDataForm()}
+    return render(request, 'add_training.html', context)
+
+
+def add_training_submit(request):
+    context = {}
+    form = TrainingDataForm(request.POST, request.FILES)
+    context['form'] = form
+    if form.is_valid():
+        context['training_data'] = form.save()
     else:
-        form = TrainingDataForm()
-        print("unvalid")
-    return render(request, 'newdata.html', {'form': form, 'User': request.user.profile})
+        return render(request, 'add_training.html', context)
+    return render(request, 'training_row.html', context)
+
+
+def add_training_cancel(request):
+    return HttpResponse()
+
+def delete_training(request, training_pk):
+    training_data = TrainingData.objects.get(pk=training_pk)
+    training_data.delete()
+    return HttpResponse()

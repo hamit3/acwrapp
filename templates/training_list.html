@@ -1,0 +1,22 @@
+<table class="table table-striped w-100 d-block d-md-table" style="table-layout: fixed; width: 60%;">
+    <thead class="text-center">
+        <th>Player Name</th>
+        <th>Activity Type</th>
+        <th>Activity Date (Ex: 22/03/2024) </th>
+        <th>Activity Duration (Minutes)</th>
+        <th>Total Distance (Meters)</th>
+        <th>High Speed Distance (>20km/h)</th>
+        <th>Sprint Distance (>25km/h)</th>
+        <th>HMLD (>25.5W/kg)</th>
+        <th>Acce + Dec (>+-3m/sn2)</th>
+        <th>Maximum Speed (Km/h)</th>
+        <th>
+        <button class='btn btn-dark' hx-get="{% url 'add_training' %}" hx-target="next tbody" hx-swap="afterbegin"><svg class="bi bi-plus" fill="white" width="24" height="24"><use xlink:href="#plus"></svg></button>
+        </th>
+    </thead>
+    <tbody class="text-center">
+        {% for training_data in training_datas %}
+            {% include 'training_row.html' %}
+        {% endfor %}
+    </tbody>
+</table>
