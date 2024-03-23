@@ -14,42 +14,12 @@
       background: #fff;
       margin-top: 30px;
       padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
     p {
       margin-bottom: 1.5rem;
-    }
-    .card {
-      border: none;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease-in-out;
-      text-align: center;
-      border-radius: 3%; /* Yuvarlak köşeler */
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-body {
-      padding: 20px;
-    }
-
-    .card-title {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .list-group-item {
-      border-color: transparent;
-      border-radius: 0;
-    }
-
-    .list-group-item:last-child {
-      border-bottom: none;
     }
   </style>
   <div class="container">
@@ -66,23 +36,9 @@
     <p>
       Our platform provides tools to calculate and analyze ACWR, helping coaches and athletes make informed decisions about training and recovery strategies.
     </p>
-    <h2>Why Choose Our Platform?</h2>
-    <ul>
-        <p></p>
-        <li>Utilizes data from leading sports performance devices such as Actinsports, Catapultsport, and Statsports.</li>
-        <p></p>
-        <li>Provides comprehensive analysis and insights into ACWR.</li>
-        <p></p>
-        <li>Allows for customized training plans based on individual athlete needs.</li>
-        <p></p>
-        <li>Supports real-time monitoring of workload to optimize performance and reduce injury risk.</li>
-        <p></p>
-        <li>Whether you're a coach, athlete, or sports scientist, our platform is your ultimate tool for enhancing performance and achieving your goals.</li>
-        <p></p>
-        <p>It's currently <b>FREE</b> for early adopters</p><a href="{% url 'login' %}" class="btn btn-dark">Get Started</a>
-    </ul>
+      <p>It's currently <b>FREE</b> for early adopters</p><a href="{% url 'signup' %}" class="btn btn-dark">Get Started</a>
 </div>
-<div class="container"></div>
+<p></p>
 
 {% endblock %}
 

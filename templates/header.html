@@ -21,15 +21,12 @@
       <!-- Sign In and Sign Out -->
       <ul class="navbar-nav">
         {% if not request.user.is_authenticated %}
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'login' %}">Sign In</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Sign In</a>
+            </li>
         {% else %}
         <li class="nav-item">
-          <img src="{% static 'img/user.jpeg'%}" alt="Sign Out" id="useravatar">
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'logout' %}">Sign Out</a>
+            <a class="nav-link" href="{% url 'logout' %}">Sign Out</a>
         </li>
         {% endif %}
       </ul>

@@ -15,13 +15,13 @@ class Profile(models.Model):
         (TESTUSER, 'TESTUSER'),
     )
     user = models.OneToOneField(User, related_name="profile", on_delete=models.CASCADE)
-    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
+    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True, default=USER)
     team = models.ForeignKey('Team', related_name='player', on_delete=models.SET_NULL, null=True, blank=True)
     def __str__(self):
         return str(self.user)
 
 class Team(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name="Team Name")
     # Diğer gerekli alanlar eklenebilir
     def __str__(self):
         return str(self.name)
@@ -44,6 +44,7 @@ class Player(models.Model):
     gender = models.PositiveSmallIntegerField(choices=GENDER_CHOICES, default=1, null=True, blank=True)
     def __str__(self):
         return str(self.name)
+
 class MaxMatchData(models.Model):
     player = models.ForeignKey(Player, related_name='max_match_values', on_delete=models.CASCADE)
     duration = models.IntegerField(null=False, blank=False, default=90)
@@ -58,4 +59,3 @@ class MaxMatchData(models.Model):
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
-    instance.profile.save()

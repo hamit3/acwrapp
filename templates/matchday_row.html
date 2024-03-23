@@ -1,0 +1,22 @@
+<tr>
+    <td>{{ matchdaydata.player.name }}</td>
+    <td>{{ matchdaydata.duration }}</td>
+    <td>{{ matchdaydata.total_distance }}</td>
+    <td>{{ matchdaydata.high_speed_distance }}</td>
+    <td>{{ matchdaydata.sprint_distance }}</td>
+    <td>{{ matchdaydata.hmld }}</td>
+    <td>{{ matchdaydata.total_acc_deacc }}</td>
+    <td>{{ matchdaydata.max_speed }}</td>
+
+    <td>
+        <button class='btn'
+        hx-confirm='Are you sure?'
+        hx-target="closest tr"
+        hx-swap="outerHTML swap:1s"
+        hx-delete="{% url 'delete_matchday' matchdaydata.pk %}">
+        <svg class="bi bi-trash3" width="24" height="24">
+            <use xlink:href="#trash3">
+        </svg>
+        </button>
+    </td>
+</tr>

@@ -1,0 +1,20 @@
+<table class="table table-striped w-100 d-block d-md-table" style="table-layout: fixed; width: 60%;">
+    <thead class="text-center">
+        <th>Player Name</th>
+        <th>Duration (minutes)</th>
+        <th>Total Distance (meters)</th>
+        <th>High Speed Distance (meters) (>20km/h)</th>
+        <th>Sprint Distance (meters) (>25km/h)</th>
+        <th>High Metabolic Load Distance (meters) (>25.5W/kg)</th>
+        <th>Sum of Acceleration and Deceleration Count (>3m/s2)</th>
+        <th>Max Seed (km/h)</th>
+        <th>
+        <button class='btn btn-dark' hx-get="{% url 'add_matchday' %}" hx-target="next tbody" hx-swap="afterbegin"><svg class="bi bi-plus" fill="white" width="24" height="24"><use xlink:href="#plus"></svg></button>
+        </th>
+    </thead>
+    <tbody class="text-center">
+        {% for matchdaydata in matchdaydatas %}
+            {% include 'matchday_row.html' %}
+        {% endfor %}
+    </tbody>
+</table>
