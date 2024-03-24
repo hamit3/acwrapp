@@ -5,22 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b56fbe0-1af2-4a88-bd79-6706732e17ff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/add_matchday.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/matchday_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/matchday_row.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/add_player.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/player_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/player_row.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/players.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acwr/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/acwr/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acwr/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/acwr/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matchday/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/matchday/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newdata/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/newdata/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/matchday.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matchday.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/newdata.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newdata.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
     </list>
     <list id="6cdc6823-7cb8-4b69-ba59-7cdec8eef7dd" name="İlk sürüm" comment="İlk sürüm&#10;&#10;(cherry picked from commit 795b201)">
       <changelist_data name="Hamit UCUNCU" email="hamit.ucuncu@ogr.iu.edu.tr" date="1530057117000" />
@@ -552,30 +560,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ACWR/acwrapp/templates&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/ACWR/acwrapp/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ACWR\acwrapp\templates" />
@@ -722,6 +731,7 @@
       <workItem from="1711096680749" duration="6012000" />
       <workItem from="1711125046096" duration="24720000" />
       <workItem from="1711192178921" duration="13495000" />
+      <workItem from="1711222311616" duration="16504000" />
     </task>
     <servers />
   </component>
@@ -824,6 +834,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/newdata/views.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

@@ -1,0 +1,19 @@
+<table class="table table-striped w-100 d-block d-md-table" style="table-layout: fixed; width: 60%;">
+    <thead class="text-center">
+        <th>ID</th>
+        <th>Team</th>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>
+        <button class='btn btn-dark' hx-get="{% url 'add_player' %}" hx-target="next tbody" hx-swap="afterbegin"><svg class="bi bi-plus" fill="white" width="24" height="24"><use xlink:href="#plus"></svg></button>
+        </th>
+    </thead>
+    <tbody class="text-center">
+        {% for player in players %}
+            {% include 'player_row.html' %}
+        {% endfor %}
+    </tbody>
+</table>

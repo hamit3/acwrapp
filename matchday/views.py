@@ -3,30 +3,47 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django import forms
 from accounts.models import MaxMatchData
+from django.contrib import messages
 
 class MaxMatchDay(TemplateView):
     template_name = 'matchday.html'
 
 class MaxMatchDayDataForm(forms.ModelForm):
+    player = forms.ModelChoiceField(queryset=None, label="Select Player")
+
     class Meta:
         model = MaxMatchData
-        exclude = []
+        fields = ('player', 'duration', 'total_distance', 'high_speed_distance', 'sprint_distance', 'hmld', 'total_acc_deacc', 'max_speed')
+
+    def __init__(self, *args, **kwargs):
+        team_players = kwargs.pop('team_players', None)
+        super(MaxMatchDayDataForm, self).__init__(*args, **kwargs)
+        if team_players:
+            self.fields['player'].queryset = team_players
+
 
 def get_matchday(request):
     context = {}
-    team = request.user.profile.team.name
-    matchdaydata = MaxMatchData.objects.all()
+    profile = request.user.profile
+    team = profile.team
+    matchdaydata = MaxMatchData.objects.filter(player__team=team)
     context = {'matchdaydatas': matchdaydata}
     return render(request, 'matchday_list.html', context)
 
 
 def add_matchday(request):
-    context = {'form': MaxMatchDayDataForm()}
+    team_players = request.user.profile.team.team_players.all()
+    if not team_players:
+        messages.error(request, 'There is no player added for this account, please firstly add players !')
+    form = MaxMatchDayDataForm(team_players=team_players)
+    context = {'form': form}
     return render(request, 'add_matchday.html', context)
+
 
 def add_matchday_submit(request):
     context = {}
-    form = MaxMatchDayDataForm(request.POST, request.FILES)
+    team_players = request.user.profile.team.team_players.all()
+    form = MaxMatchDayDataForm(request.POST, request.FILES, team_players=team_players)
     context['form'] = form
     if form.is_valid():
         old_matchday_data = form.cleaned_data.get('player')
@@ -39,6 +56,8 @@ def add_matchday_submit(request):
         return render(request, 'matchday_row.html', context)
     else:
         return render(request, 'add_matchday.html', context)
+
+
 
 def add_matchday_cancel(request):
     return HttpResponse()

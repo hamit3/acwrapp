@@ -10,6 +10,9 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {% if request.user.is_authenticated %}
         <li class="nav-item">
+          <a class="nav-link {% if request.path == '/player/' %}active{% endif %}" href="{% url 'player' %}">Players</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link {% if request.path == '/maxmatchday/' %}active{% endif %}" href="{% url 'matchday' %}">Matchday Metrics</a>
         </li>
         <li class="nav-item">

@@ -4,7 +4,7 @@ from django.shortcuts import render
 from newdata.models import TrainingData
 from django.views.generic import TemplateView
 from django import forms
-from django.views.decorators.http import require_http_methods
+
 
 class NewDataView(TemplateView):
     template_name = 'newdata.html'
@@ -16,7 +16,9 @@ class TrainingDataForm(forms.ModelForm):
 
 def get_training_list(request):
     context = {}
-    training_data = TrainingData.objects.all().order_by('-id')
+    profile = request.user.profile
+    team = profile.team
+    training_data = TrainingData.objects.filter(player__team=team).order_by('-id')
     context['training_datas'] = training_data
     return render(request, 'training_list.html', context)
 

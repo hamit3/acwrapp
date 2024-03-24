@@ -20,7 +20,11 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="  crossorigin="anonymous"></script>
 
 </head>
+<body>
+    {% include 'header.html' %}
+    {% include 'messages.html' %}
     {% block body %}
 
     {% endblock %}
+</body>
 </html>
